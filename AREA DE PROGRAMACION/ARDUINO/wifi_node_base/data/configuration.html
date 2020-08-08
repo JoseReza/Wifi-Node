@@ -1,0 +1,63 @@
+<!DOCTYPE HTML><html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2196f3"/>
+  <link rel="stylesheet" href="http://%SERVERIP%/bootstrap.css">
+  <link rel="icon" href="http://%SERVERIP%/icon.ico">
+  <title>Wifi Node</title>
+</head>
+<body>
+
+  <!-- //////////////////////////////////////////////NAVBAR START/////////////////////////////////////////////////// -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Wifi Node</a>
+
+  <div class="collapse navbar-collapse show" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-center" href="http://%SERVERIP%">Home</a>
+      </li>
+      <li class="nav-item active bg-warning">
+        <a class="nav-link text-center" href="#">Configuration <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="http://%SERVERIP%/features">Features</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h2 class="text-center bg-primary text-white">Wifi configuration</h2>
+<br>
+
+<form action="/configuration">
+  <div class="text-center">
+
+    %WIFIMODE%
+
+    <label>Name:</label>
+    <br>
+    <input type="text" name="wifiname"  value="%WIFINAME%" maxlength="19" required>
+    <br>
+
+    <label>Password:</label>
+    <br>
+    <input type="text" name="wifipassword"  value="%WIFIPASSWORD%" maxlength="19" required>
+    <br>
+
+    <input type="submit" value="Submit" class="btn btn-primary btn-sm">
+
+  </div>
+  </form><br><br>
+
+  <form action="/configuration">
+  <div class="text-center">
+    <input type="submit" name="restartstate" value="Restart device" class="btn btn-primary btn-sm">
+  </div>
+  </form>
+
+ <!-- //////////////////////////////////////////////NAVBAR END/////////////////////////////////////////////////// -->
+
+</body>
+</html>
